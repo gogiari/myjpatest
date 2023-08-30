@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>User List</h2>
+    <table>
+        <tr>
+            <th>userid</th>
+            <th>passwd</th>
+            <th>username</th>
+            <th>email</th>
+            <th>indate</th>
+        </tr>
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.userid}"></td>
+            <td th:text="${user.passwd}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.indate}"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
